@@ -6,7 +6,7 @@ import Materia.Models.NodoGenerico;
 
 public class PilaGenerica <T>{
     public NodoGenerico<T> top;
-
+    public int size;
     public PilaGenerica(){
         top = null;
     }
@@ -15,6 +15,7 @@ public class PilaGenerica <T>{
         NodoGenerico<T> nuevoNodo = new NodoGenerico<T>(dato);
         nuevoNodo.next = top;
         top=nuevoNodo;
+        size ++;
     }
 
     public boolean isEmpty(){
@@ -28,6 +29,7 @@ public class PilaGenerica <T>{
         }
         T data = top.data;
         top = top.next;
+        size --;
         return data;
     }
 
@@ -37,5 +39,9 @@ public class PilaGenerica <T>{
             throw new EmptyStackException();
         }
         return top.data;
+    }
+
+    public int size(){
+        return size;
     }
 }
