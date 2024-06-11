@@ -1,3 +1,8 @@
+import java.util.Stack;
+
+import Ejercicio_01_sign.Ejercicio_01_sign;
+import Ejercicio_02_sorting.Ejercicio_02_sorting;
+import Materia.ListasEnlazadas.ListaEnlazada;
 import Materia.Models.Cola;
 import Materia.Models.ColaGenerica;
 import Materia.Pilas.Pantalla;
@@ -62,6 +67,46 @@ public class App {
         colaPantallas.addNode(new Pantalla("User Page", "/home/menu/user"));
         System.out.println("Estoy en la pantalla: \n\t --> "+colaPantallas.peek().getNombre());
         System.out.println("La cola tiene "+colaPantallas.size()+ " elementos");
+
+
+        Ejercicio_01_sign Ejercicio1 = new Ejercicio_01_sign();
+        System.out.println("Output: ({)}");
+        System.out.println("Input: "+Ejercicio1.isValid("({)}"));
+
+
+        Ejercicio_02_sorting Ejercicio2= new Ejercicio_02_sorting();
+        PilaGenerica<Integer> Pila = new PilaGenerica<Integer>();
+        Pila.push(34);
+        Pila.push(3);
+        Pila.push(31);
+        Pila.push(98);
+        Pila.push(92);
+        Pila.push(23);
+
+        Ejercicio2.sortPila(Pila);
+
+        System.out.println("Pila ordenada " + Ejercicio2);
+        
+
+        
+        
+        ListaEnlazada lista = new ListaEnlazada();
+        lista.addNode(1);
+        lista.addNode(4);
+        lista.addNode(3);
+        lista.addNode(6);
+
+        lista.print();
+        lista.deleteNode(1);
+        lista.print();
+        lista.deleteNode(3);
+        lista.print();
+
+       
+
+
     }
+
+    
 
 }
