@@ -2,6 +2,7 @@ import java.util.Stack;
 
 import Ejercicio_01_sign.Ejercicio_01_sign;
 import Ejercicio_02_sorting.Ejercicio_02_sorting;
+import Ejercicio_03_linkedLists.LinkedListEjr;
 import Materia.ListasEnlazadas.ListaEnlazada;
 import Materia.Models.Cola;
 import Materia.Models.ColaGenerica;
@@ -101,6 +102,17 @@ public class App {
         lista.print();
         lista.deleteNode(3);
         lista.print();
+
+
+        LinkedListEjr list = new LinkedListEjr();
+        list.add(1);
+        list.add(2);
+        list.add(5);
+        list.add(7);
+        list.add(6);
+
+        
+        System.out.println(list.getByPos(1));
 
        
 
